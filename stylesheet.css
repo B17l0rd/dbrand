@@ -31,7 +31,7 @@ body {
     margin-top: 5%;
 }
 
-.fightsetup{
+.fightSetUp{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +56,6 @@ body {
     align-items: center;
     font-size: 25px;
     margin-left: 15%;
-    color: #eee7e7ec;
+    color: #0a0808ec;
     
 }
