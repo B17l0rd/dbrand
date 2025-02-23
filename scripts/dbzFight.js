@@ -69,9 +69,9 @@ const heroes = [
 ];
 
 const villains = [
-    { name: "Pilaf", powerLevel: 50,image: "images/vilans/Pila.png"  },
-    { name: "Shu", powerLevel: 40,  },
-    { name: "Mai", powerLevel: 60,  },
+    { name: "Pilaf", powerLevel: 50,image: " images/vilans/Pila.png"},
+    { name: "Shu", powerLevel: 40,},
+    { name: "Mai", powerLevel: 60,},
     /*{ name: "Red Ribbon Army", powerLevel: 200,  },
     { name: "Commander Red", powerLevel: 100,  },
     { name: "Adjunct Black", powerLevel: 150,  },
