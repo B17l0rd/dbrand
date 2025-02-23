@@ -1,8 +1,8 @@
 const heroes = [
     { name: "Goku", powerLevel: 1000,image: "images/heroes/goku.webp" },
-    /*{ name: "Vegeta", powerLevel: 995 },
+    { name: "Vegeta", powerLevel: 995 },
     { name: "Gohan", powerLevel: 980,  },
-    { name: "Piccolo", powerLevel: 950,  },
+    /*{ name: "Piccolo", powerLevel: 950,  },
     { name: "Krillin", powerLevel: 750,  },
     { name: "Bulma", powerLevel: 150,  },
     { name: "Trunks",  powerLevel: 970 },
@@ -70,9 +70,9 @@ const heroes = [
 
 const villains = [
     { name: "Pilaf", powerLevel: 50,image: "images/vilans/Pila.png"  },
-    /*{ name: "Shu", powerLevel: 40,  },
+    { name: "Shu", powerLevel: 40,  },
     { name: "Mai", powerLevel: 60,  },
-    { name: "Red Ribbon Army", powerLevel: 200,  },
+    /*{ name: "Red Ribbon Army", powerLevel: 200,  },
     { name: "Commander Red", powerLevel: 100,  },
     { name: "Adjunct Black", powerLevel: 150,  },
     { name: "Colonel Silver", powerLevel: 180,  },
