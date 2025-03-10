@@ -1,19 +1,54 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheet.css">
     <title>Document</title>
 </head>
+
 <body>
     <header class="header"><img id="logo" src="/images/logo/Dragon_Ball_logo.webp" alt="Dragon ball logo"></header>
-        <div class="container">
-            <div class="fightSetUp">
-                <button id="botao" onclick="setUp()">Start Fight</button>
-            </div>
-        </div> 
-        <p  id="result"></p>
-        <script src="/Scripts/dbzFight.js"></script>
+
+    <section id="presentation" class="prep">
+        <div id="fighter1" class="prep">
+            <h3>Fighter1</h3>
+        </div>
+
+        <div id="vs" class="pprep">
+            <h2>VS</h2>
+        </div>
+
+        <div id="vilan" class="prep">
+            <h3>Fighter2</h3>
+        </div>
+    </section>
+
+    <section id="selection1" class="selection">
+        <form>
+            <label for="select_char1">Select your Character:</label>
+            <input type="text" id="select_char1_text1" name="select_char1_text1" placeholder="Search by name.." oninput="populate_Select_Options('select_char1_text', 'select_char1')">
+            <select name="select_char1" id="select_char1" onchange="populate_Select_Options('select_char1', 'select_char1_text')">
+                <option value="select">Select</option>
+        
+            </select>
+            <label for="select_char2">Select your Oponent:</label>
+            <input type="text" id="select_char2_text" name="select_char2_text" placeholder="Search by name" oninput="populate_Select_Options('select_char1_text', 'select_char1')" >
+            <select name="select_char2" id="select_char2" onchange="populate_Select_Options('select_char2', 'select_char2_text')>
+                <option value="select">Select</option>
+            </select>
+            
+        </form>
+    </section>
+
+    <div class="container">
+        <div class="fightSetUp">
+            <button id="botao" onclick="setUp()">Start Fight</button>
+        </div>
+    </div>
+    <p id="result"></p>
+    <script src="/scripts/dbzFight.js"></script>
 </body>
+
 </html>

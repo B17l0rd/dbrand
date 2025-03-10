@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/background/goku.jpg');
+    background-image: url('images/fundo/goku.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -23,11 +23,45 @@ body {
     margin:auto;
 }
 
+#presentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#presentation .prep {
+    flex: auto;
+    margin: 0 50px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 250px;
+    max-width: 350px;
+    border-radius: 10px;
+    border: #fc7a00 5px solid;
+}
+
+#fighter1, #fighter2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+#vs{
+   font-size: 60px;
+   color: #f8f8f8;
+   text-shadow: 4px 4px 6px #000000;
+}   
+
+
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    width: 100%;
+    min-height:  100px;
     margin-top: 5%;
 }
 
@@ -54,8 +88,10 @@ body {
 #result{
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    margin-left: 15%;
-    color: #0a0808ec;
+    max-width: 800px;
+    font-size: 23px;
+    text-shadow: 5px 5px 7px #000000;
+    margin: 0 auto;
+    color: #ffffffec;
     
 }

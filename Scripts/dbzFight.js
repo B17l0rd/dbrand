@@ -1,7 +1,7 @@
 const heroes = [
     { name: "Goku", powerLevel: 1000,image: "images/heroes/goku.webp" },
-    /*{ name: "Vegeta", powerLevel: 995 },
-    { name: "Gohan", powerLevel: 980,  },
+    { name: "Vegeta", powerLevel: 995, image: "images/heroes/vegeta.png" },
+    /*{ name: "Gohan", powerLevel: 980,  },
     { name: "Piccolo", powerLevel: 950,  },
     { name: "Krillin", powerLevel: 750,  },
     { name: "Bulma", powerLevel: 150,  },
@@ -70,8 +70,8 @@ const heroes = [
 
 const villains = [
     { name: "Pilaf", powerLevel: 50,image: "images/vilans/Pila.png"  },
-    /*{ name: "Shu", powerLevel: 40,  },
-    { name: "Mai", powerLevel: 60,  },
+   { name: "Shu", powerLevel: 40  },
+    /*{ name: "Mai", powerLevel: 60 },
     { name: "Red Ribbon Army", powerLevel: 200,  },
     { name: "Commander Red", powerLevel: 100,  },
     { name: "Adjunct Black", powerLevel: 150,  },
@@ -147,7 +147,7 @@ const villains = [
 
 const grounds = [
     { name: "Earth", image: null },
-   /* { name: "Namek", image: null },
+    { name: "Namek", image: null },
     { name: "Planet Vegeta", image: null },
     { name: "Other World", image: null },
     { name: "King Kai's Planet", image: null },
@@ -199,16 +199,17 @@ const grounds = [
     { name: "Dr. Gero's Laboratory", image: null },
     { name: "Baba's Palace", image: null },
     { name: "Otherworld Tournament Arena", image: null },
-    { name: "Snake Way", image: null }*/
+    { name: "Snake Way", image: null }
 ];
 
 function rand (array) {
+    //randomly selects an element from the array
     let i = Math.floor(Math.random() * array.length)
     return  array[i]
 }
 
 function batleOutcome (heroes,villains){ 
-    //calculates the total power 
+    //calculates the total power giving the probability of the hero winning depending on the power level
     const totalPower = heroes.powerLevel + villains.powerLevel ;
 
     const probA = heroes.powerLevel / totalPower;
@@ -225,7 +226,40 @@ function batleOutcome (heroes,villains){
 
 }
 
+function populate_Select_Options() {
+    //populates the select options with the names of the locations from the array
+    const select1 = document.getElementById('select_char1');
+    const select2 = document.getElementById('select_char2');
+
+    heroes.forEach((hero,index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.text = hero.name;
+        select1.add(option);
+    });
+    // filter array to get the names .
+    // hero.filter(hero => hero.name === 'Goku');
+
+    villains.forEach((villain,index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.text = villain.name;
+        select2.add(option);
+    });
+
+}
+
+
+// Call populateSelectOptions on page load (this is new to me )
+window.onload = populate_Select_Options;
+
+
+
+
+
+
 function setUp(){
+    // produces the balte outcome
     let heroe = 
         rand(heroes);
     
@@ -236,10 +270,19 @@ function setUp(){
         rand (grounds);
 
     let winner = batleOutcome(heroe,vilan);
+
+    
     
     /*console.log(`In Today's fight our Hero ${heroe} will face the mighty ${vilan} and the figth is taking place on ${place}`)*/
-    document.getElementById('result').innerHTML = `In Today's fight our Hero <strong>${heroe.name}--Power level : ${heroe.powerLevel} </strong>will face the mighty <strong>${vilan.name}--Power level : ${vilan.powerLevel}</strong> and the fight is taking place on <italic>${place.name}</strong>,and the winner is <strong>,${winner.name}</strong> <img src= "${winner.image}" alt="winner" width="150" height="150">`;
+    document.getElementById('result').innerHTML = `In Today's fight our Hero <strong>${heroe.name}--Power level : ${heroe.powerLevel} </strong>will face the mighty <strong>${vilan.name}--Power level : ${vilan.powerLevel}</strong> and the fight is taking place on <italic>${place.name}</strong>,and the winner is <strong>,${winner.name}</strong> <img src= "${winner.image}" alt="winner" width="180px" height="200px">`;
+
+    //this section will be deleted just visible for testing purposes
+    document.getElementById('fighter1').innerHTML = `
+    <h3>${heroe.name}</h3>
+    <img src="${heroe.image}" alt="${heroe.name}" style="max-width: 200px;  max-height: 200px;min-height: 200px;">
+    <p>Power Level: ${heroe.powerLevel !== null ? heroe.powerLevel : 'Unknown'}</p>`;
 }
+
 
 
 
