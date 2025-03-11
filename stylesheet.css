@@ -88,9 +88,10 @@ body {
 #result{
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    margin-left: 15%;
-    color: #eee7e7ec;
-    text-shadow : 5px 5px 7px #000000; 
+    max-width: 800px;
+    font-size: 23px;
+    text-shadow: 5px 5px 7px #000000;
+    margin: 0 auto;
+    color: #ffffffec;
     
 }

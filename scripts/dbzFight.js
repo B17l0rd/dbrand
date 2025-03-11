@@ -1,14 +1,8 @@
 const heroes = [
     { name: "Goku", powerLevel: 1000,image: "images/heroes/goku.webp" },
-<<<<<<< HEAD:Scripts/dbzFight.js
     { name: "Vegeta", powerLevel: 995, image: "images/heroes/vegeta.png" },
     /*{ name: "Gohan", powerLevel: 980,  },
     { name: "Piccolo", powerLevel: 950,  },
-=======
-    { name: "Vegeta", powerLevel: 995, image: "images/heroes/vegeta.png" },
-    /*{ name: "Gohan", powerLevel: 980,  },
-    { name: "Piccolo", powerLevel: 950,  },
->>>>>>> c57dd0f70359f0ec9b562d1b89c0ac37ee2f4590:scripts/dbzFight.js
     { name: "Krillin", powerLevel: 750,  },
     { name: "Bulma", powerLevel: 150,  },
     { name: "Trunks",  powerLevel: 970 },
@@ -75,17 +69,10 @@ const heroes = [
 ];
 
 const villains = [
-<<<<<<< HEAD:Scripts/dbzFight.js
     { name: "Pilaf", powerLevel: 50,image: "images/vilans/Pila.png"  },
    { name: "Shu", powerLevel: 40  },
     /*{ name: "Mai", powerLevel: 60 },
     { name: "Red Ribbon Army", powerLevel: 200,  },
-=======
-    { name: "Pilaf", powerLevel: 50,image: "images/vilans/Pila.png"  },
-    { name: "Shu", powerLevel: 40  },
-    /*{ name: "Mai", powerLevel: 60 },
-    { name: "Red Ribbon Army", powerLevel: 200,  },
->>>>>>> c57dd0f70359f0ec9b562d1b89c0ac37ee2f4590:scripts/dbzFight.js
     { name: "Commander Red", powerLevel: 100,  },
     { name: "Adjunct Black", powerLevel: 150,  },
     { name: "Colonel Silver", powerLevel: 180,  },
